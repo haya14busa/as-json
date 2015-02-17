@@ -4,8 +4,10 @@ require 'sinatra/jsonp'
 require 'open-uri'
 require 'yaml'
 
+require 'rdiscount'
+
 get '/' do
-  'Hello, world'
+  markdown :README
 end
 
 get '/yaml' do
